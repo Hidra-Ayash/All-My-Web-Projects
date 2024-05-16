@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  background: linear-gradient(rgb(69, 28, 28), rgb(246, 125, 3));
+  width: 100%;
+  height: 100svh;
+}
+
+.container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  width: 80%;
+  color: rgb(255, 127, 127);
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+.text h4,
+h2 {
+  margin: 20px 0px;
+  display: inline-block;
+}
+h2 {
+  font-size: 32px;
+  color: rgb(240, 228, 8);
+  text-transform: uppercase;
+  filter: drop-shadow(10px 7px 5px rgb(244, 139, 20));
+}
+h4 {
+  font-size: 16px;
+  color: rgb(4, 183, 238);
+  text-decoration: wavy;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+.box,
+.img2Front,
+.img3Front {
+  background-color: #eee;
+  border-radius: 10%;
+  box-shadow: 10px 5px 7px #eee;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: 1.6s;
+  left: 50px;
+  position: absolute;
+}
+.box .face {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.img1Front img {
+  width: 250px;
+}
+.box:hover {
+  transform: rotateX(180deg);
+  transition: 2.5s;
+  box-shadow: 10px 5px 7px #b9ced5;
+}
+.img1Front p,
+.img2Front p,
+.img3Front p {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  position: absolute;
+  top: 90%;
+  color: rgb(67, 169, 8);
+}
+.img1Back,
+.img2Back,
+.img3Back {
+  transform: rotateX(180deg);
+  background-color: rgb(201, 234, 238);
+  border-radius: 10%;
+}
+
+.img1Back h3,
+.img2Back h3,
+.img3Back h3 {
+  font-size: 25px;
+  font-style: italic;
+  color: green;
+  position: absolute;
+  top: 20px;
+}
+.img1Back p,
+.img2Back p,
+.img3Back p {
+  font-size: 15px;
+  font-weight: 600;
+  color: red;
+  position: absolute;
+  top: 50px;
+}
+.img1Back ul li,
+.img2Back ul li,
+.img3Back ul li {
+  font-size: 21px;
+  font-weight: 300;
+  color: rgb(0, 94, 255);
+  position: relative;
+  top: 28px;
+  left: 10px;
+  list-style-type: square;
+}
+.img1Back #btn1,
+.img2Back #btn2,
+.img3Back #btn3 {
+  position: relative;
+  width: 80px;
+  background-color: rgb(214, 236, 16);
+  height: 30px;
+  border-radius: 8px;
+  color: rgb(255, 0, 174);
+  top: 120px;
+  cursor: pointer;
+}
+#btn1:hover,
+#btn2:hover,
+#btn3:hover {
+  background-color: rgb(108, 235, 136);
+  color: rgb(238, 10, 10);
+  transition: 0.9s;
+}
+#btn4 {
+  width: 100px;
+  height: auto;
+  background-color: rgb(205, 169, 205);
+  border-radius: 4px;
+  color: rgb(255, 0, 30);
+  position: absolute;
+  top: 90%;
+  left: 10%;
+}
+#btn4 a {
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.img2Front img {
+  width: 280px;
+}
+.img3Front img {
+  width: 200px;
+}
+.img2Front,
+.img2Back {
+  position: absolute;
+  left: 500px;
+}
+.img3Front,
+.img3Back {
+  position: absolute;
+  left: 950px;
+}
+
+@media (min-width: 950px) and (max-width: 1412px) {
+  .box,
+  .img2Front,
+  .img3Front {
+    width: 200px;
+    height: 200px;
+  }
+  .img1Front img,
+  .img2Front img,
+  .img3Front img {
+    width: 200px;
+  }
+  .img1Front p,
+  .img2Front p,
+  .img3Front p {
+    font-size: 14px;
+  }
+  .img1Back h3,
+  .img2Back h3,
+  .img3Back h3 {
+    font-size: 15px;
+  }
+  .img1Back p,
+  .img2Back p,
+  .img3Back p {
+    font-size: 10px;
+  }
+  .img1Back ul li,
+  .img2Back ul li,
+  .img3Back ul li {
+    font-size: 14px;
+  }
+  .img1Back #btn1,
+  .img2Back #btn2,
+  .img3Back #btn3 {
+    width: 60px;
+    height: 20px;
+    top: 85px;
+  }
+}
+@media (min-width: 500px) and (max-width: 650px) {
+  .box,
+  .img2Front,
+  .img3Front {
+    width: 100px;
+    height: 100px;
+  }
+  .img1Front img,
+  .img2Front img,
+  .img3Front img {
+    width: 100px;
+  }
+  .img1Front p,
+  .img2Front p,
+  .img3Front p {
+    font-size: 8px;
+  }
+  .img1Back h3,
+  .img2Back h3,
+  .img3Back h3 {
+    font-size: 9px;
+  }
+  .img1Back p,
+  .img2Back p,
+  .img3Back p {
+    font-size: 7px;
+  }
+  .img1Back ul li,
+  .img2Back ul li,
+  .img3Back ul li {
+    font-size: 9px;
+  }
+  .img1Back #btn1,
+  .img2Back #btn2,
+  .img3Back #btn3 {
+    width: 60px;
+    height: 20px;
+    top: 65px;
+  }
+  .img2Front,
+  .img2Back {
+    position: absolute;
+    left: 200px;
+  }
+  .img3Front,
+  .img3Back {
+    position: absolute;
+    left: 450px;
+  }
+}
